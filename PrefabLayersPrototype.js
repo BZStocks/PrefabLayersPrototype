@@ -6,7 +6,7 @@ function bzwParseToJS(instr,namejs) {
   builder.push("function ".concat(namejs,"(xpos, ypos, zpos) {"));
   builder.push("  let builder=[];");
   for (let i = 0; i < lines.length; i++) {
-    let line = lines[i].trimStart();
+    let line = lines[i].trim();
     if (line.length > 2) {
       if (line.indexOf("#") !== 0) {
         let data = line.split(" ");
